@@ -1,0 +1,5 @@
+# ==== Mocha ====
+# global install
+npm install mocha -g
+# project install
+npm install mocha --save-dev
