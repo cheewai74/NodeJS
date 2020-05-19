@@ -1,5 +1,13 @@
 # ==== Mocha ====
+
 # global install
 npm install mocha -g
 # project install
 npm install mocha --save-dev
+
+Update package.json
+open package.json
+change the “scripts” block to the following code snippet
+"scripts": {
+  "test": "mocha"
+}
