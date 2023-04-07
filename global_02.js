@@ -10,3 +10,5 @@ let user = grab("--user");
 
 console.log(greeting);
 console.log(user);
+
+// node global_02 --user Tom --greeting "Hello from Node"
