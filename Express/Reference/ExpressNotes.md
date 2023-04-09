@@ -19,3 +19,6 @@ npm install npm@latest -g
 npm install --save-dev @babel/core @babel/cli @babel/preset-env  @babel/node
 npm cache clean -force
 npm start
+
+Git: (Uninstall this to check in to git)
+npm uninstall --save-dev @babel/core @babel/cli @babel/preset-env  @babel/node
