@@ -15,5 +15,7 @@ $env:DEBUG='testapp:*'; npm start
 express-essentials:
 npm init
 npm install express nodemon
+npm install npm@latest -g
 npm install --save-dev @babel/core @babel/cli @babel/preset-env  @babel/node
+npm cache clean -force
 npm start
