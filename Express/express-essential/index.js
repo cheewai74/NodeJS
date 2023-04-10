@@ -24,6 +24,40 @@ app.get("/", (request, response) => {
     response.json(data);
 });
 
+app.get("/redirect", (request, response) => {
+    response.redirect("https://www.linkedin.com");
+});
+
+app.route("/class").get((request, response) => {
+    response.send("Retrieve class info");
+})
+.post((request, response) => {
+    response.send("Create class info");
+})
+.put((request, response) => {
+    response.send("Update class info");
+});
+
+// app.get("/class", (request, response) => {
+//     response.send("Retrieve class info");
+// });
+
+// app.post("/class", (request, response) => {
+//     response.send("Create class info");
+// });
+
+// app.put("/class", (request, response) => {
+//     response.send("Update class info");
+// });
+
+app.get("/next", (request, response, next) => {
+    console.log("The response will be sent by the next function");
+    next();
+}, (request, response) => {
+    response.send("I just set up a route with a second callback.")
+}
+);
+
 app.post("/create", (request, response) => {
     response.send("This is a POST request at /create");
 });
