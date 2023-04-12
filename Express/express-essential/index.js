@@ -19,10 +19,19 @@ app.get("/class/:id", (request, response)=>{
 
 app.use("/images", express.static("images"));
 
+// POST - express.json and express.url encoded
+app.use(express.json())
+
 app.get("/", (request, response) => {
     // response.send("This is a GET request at /");
     response.json(data);
 });
+
+// POST - express.json and express.url encoded
+app.post('/item', (request, response) =>{
+    console.log(request.body);
+    response.send(request.body);
+})
 
 app.get("/redirect", (request, response) => {
     response.redirect("https://www.linkedin.com");
